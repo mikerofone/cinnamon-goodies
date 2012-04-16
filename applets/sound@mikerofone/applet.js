@@ -719,10 +719,10 @@ MyApplet.prototype = {
     
     setIconName: function(icon) {
        this._icon_name = icon;
-       if (this._nbPlayers()==0)
+       // if (this._nbPlayers()==0)
          this.set_applet_icon_symbolic_name(icon);
-       else
-         this.set_applet_icon_symbolic_name('audio-x-generic');
+       // else
+       //   this.set_applet_icon_symbolic_name('audio-x-generic');
     },
 
     _nbPlayers: function() {
