@@ -883,8 +883,10 @@ MyApplet.prototype = {
         if (this[property].volume / this._volumeMax > 0.80)
             this._outputTitle.setIcon("audio-volume-high");
         this[property+'Slider'].setValue(this[property].volume / this._volumeMax);
-        if (property == '_output' && !this._output.is_muted)
-            this.setIconName(this._volumeToIcon(this._output.volume));
+        if (property == '_output' && !this._output.is_muted) {
+	    this.set_applet_tooltip("Volume: " + Math.round(this._output.volume / this._volumeMax * 100.0) + "%");
+	    this.setIconName(this._volumeToIcon(this._output.volume));
+	}
     },
     
     _volumeToIcon: function(volume) {
