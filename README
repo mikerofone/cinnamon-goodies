@@ -1,1 +1,12 @@
 This is a repository for applets and/or extensions I built or modified for the Cinnamon desktop environment.
+
+- Applets -
+
+-- Sound --
+Modified version of the original Cinnamon sound applet with the following features:
+
+* Tooltip giving volume level on mouse over
+* Prevents setting volume to levels > 100%
+* Displays volume icon all the time, even if player is running
+
+
